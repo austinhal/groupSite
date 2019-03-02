@@ -79,6 +79,16 @@ body {
         grid-auto-rows: minmax(100px, auto);
         grid-gap: 1rem;
     }
+    .box9 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .flex_div {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -99,9 +109,18 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: nowrap;
     }
 
     .flex_div {
         text-align: center;
     }
 }
+
+
+/*Sections for Final Draft*/
+/*Mobile: Default*/
+
+/*Tablet: greater than 600px*/
+
+/*Desktop: greater than 1200px*/
