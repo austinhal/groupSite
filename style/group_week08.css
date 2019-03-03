@@ -1,16 +1,11 @@
 /* PUT ALL CODE HERE */
 
-
-
 /* general CSS */
 body {
 	font-family: sans-serif;
 }
 
-/* flexbox CSS */
-
 /*flex_first*/
-
 #flex_first {
 	display: flex;
 	align-items: center;
@@ -28,6 +23,7 @@ body {
 	flex-wrap: nowrap;
 
 }
+
 .form-row, #hair, #cookie {
   display: flex;
   flex-direction: column;
@@ -35,26 +31,13 @@ body {
 }
 
 /* grid CSS */
-
-/*grid_first*/
+/*Mobile: Default*/
 #grid_first {
     display: grid;
     grid-template-columns: auto;
-}
-  @media only screen and (min-width: 600px) {
-	#grid_first {
-	  display:grid;
-	  grid-template-columns: auto auto;
-	}
-  }
-@media only screen and (min-width: 1200px) {
-    #grid_first {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-    }
+    grid-row-gap: 1rem;
 }
 
-/*grid_second*/
 .box1 {
     grid-row: 1 / 1;
 }
@@ -66,32 +49,46 @@ body {
     grid-template-columns: 1fr;
 }
 
+/*Tablet: greater than 600px*/
+
 @media screen and (min-width: 600px) {
-    .box1 {
-        flex: 0 1 100%;
-        grid-column: 1 / -1;
-        grid-row: 1 / 3;
-    }
+	#grid_first {
+	  display:grid;
+	  grid-template-columns: auto auto;
+    grid-row-gap: 1rem;
+	}
+  .box1 {
+    flex: 0 1 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+  }
 
-    #grid_second {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(100px, auto);
-        grid-gap: 1rem;
-    }
-    .box9 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+  #grid_second {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-auto-rows: minmax(100px, auto);
+     grid-gap: 1rem;
+  }
+  .box9 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+  }
 
-    .flex_div {
-        text-align: center;
-    }
+  .flex_div {
+     text-align: center;
+  }
 }
 
+/*Desktop: greater than 1200px*/
+
 @media screen and (min-width: 1200px) {
+    #grid_first {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-row-gap: 1rem;
+    }
     .box1 {
         flex: 0 1 100%;
         grid-column: 1 / -1;
@@ -116,11 +113,3 @@ body {
         text-align: center;
     }
 }
-
-
-/*Sections for Final Draft*/
-/*Mobile: Default*/
-
-/*Tablet: greater than 600px*/
-
-/*Desktop: greater than 1200px*/
